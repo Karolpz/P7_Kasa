@@ -1,0 +1,18 @@
+html {
+    font-family: vars.$font-primary;
+    font-size: 100%;
+    @media (min-width: 1024px) {
+        font-size: 62.5%;
+    }
+    @media (min-width: 768px) {
+        font-size: 56.25%;
+    }
+}
+
+h1 {
+    font-size: vars.$size48;
+}
+
+h2 {
+    font-size: vars.$size36;
+}
