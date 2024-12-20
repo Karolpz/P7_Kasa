@@ -1,0 +1,18 @@
+@use '../utils/variables' as v;
+
+.navBar ul {
+    display: flex;
+    gap: 57px;
+
+    @media (max-width: 768px) {
+        gap: 26px
+    }
+
+    & li {
+        font-weight: v.$weigh-normal;
+    }
+
+    & a.active {
+        text-decoration: underline;
+    }
+}

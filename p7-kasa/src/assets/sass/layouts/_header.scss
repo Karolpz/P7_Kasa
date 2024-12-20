@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px;
+
+    & .logoHeader img {
+        @media (max-width: 768px) {
+            width: 145px;
+            height: 47px;
+        }
+    }
+}
