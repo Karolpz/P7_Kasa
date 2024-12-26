@@ -1,8 +1,14 @@
+@use '../utils/variables' as v;
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 45px;
+    margin: v.$margin-desktop;
+
+    @media (max-width: 768px) {
+        margin: v.$margin-mobile;
+    }
 
     & .logoHeader img {
         @media (max-width: 768px) {
