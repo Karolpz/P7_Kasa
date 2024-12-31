@@ -5,6 +5,7 @@ import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
 import FicheLogement from './pages/FicheLogement';
 import Header from './layouts/Header';
+import Footer from './layouts/Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
             <Route path = "/logements" element={<FicheLogement />} />
             <Route path = "*" element={<ErrorPage />} />
         </Routes>
+
+      <Footer />
     </BrowserRouter>
   )
 }
