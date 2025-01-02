@@ -1,10 +1,14 @@
 import React from 'react'
+import imageBanner from '../assets/images/landscapeAbout.png'
+import Banner from '../components/Banner'
 
 const About = () => {
   return (
-    <div>
-        <h1>A propos</h1>
-    </div>
+    <>
+    <Banner 
+    srcImage={ imageBanner}
+    />
+    </>
   )
 }
 

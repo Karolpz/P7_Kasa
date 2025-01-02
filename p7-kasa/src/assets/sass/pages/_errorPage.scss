@@ -1,0 +1,23 @@
+@use '../utils/variables' as v;
+
+.errorPage {
+    text-align: center;
+
+    & h1 {
+        color: v.$primary-color;
+        font-size: 16rem;
+        margin-bottom: 140px;
+    }
+
+    & h2 {
+        color: v.$primary-color;
+        font-weight: v.$weigh-normal;
+        margin-bottom: 140px;
+    }
+
+    & p {
+        font-size: v.$size18;
+        text-decoration: underline;
+        margin-bottom: 140px;
+    }
+}

@@ -1,15 +1,18 @@
-import React from 'react'
-import logo from '../assets/images/landscape.png'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Banner = () => {
-  const title = 'Chez vous, partout et ailleurs'
-
+const Banner = ({ srcImage, titleImage }) => {
   return (
     <div className="banner">
-      <img src={ logo } alt='Bannière payasage du site' className='logoBanner' />
-      <h1 className='titleBanner'>{ title }</h1>
+      <img src={srcImage} alt="Bannière paysage du site" className="logoBanner" />
+      <h1 className="titleBanner">{titleImage}</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+Banner.propTypes = {
+  srcImage: PropTypes.string.isRequired,
+  titleImage: PropTypes.string,
+};
+
+export default Banner;
