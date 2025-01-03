@@ -1,0 +1,80 @@
+@use '../utils/variables' as v;
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.allCollapses {
+    margin : 0 150px 30px 150px;
+
+    @media (max-width : 768px) {
+        margin : v.$margin-mobile
+    }
+
+    & .collapseContent {
+        margin-bottom: 30px;
+
+        & .collapseBar {
+            background-color: v.$primary-color;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+
+            & h2 {
+                color: white;
+                font-size: v.$size24;
+                padding: 10px;
+
+                @media (max-width : 768px) {
+                    font-size: v.$size14;
+                }
+            }
+
+            & img {
+                margin-right: 20px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                transform-origin: center;
+
+                &.arrow {
+                    width : 32px;
+                    height: 32px;;
+                }
+
+                &.arrowOpen {
+                    transform: rotate(-180deg);
+                }
+
+                &.arrowClose {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        & .collapseText {
+            position: relative;
+            background-color: v.$secondary-color;
+            border-radius : 0 0 5px 5px;
+            animation: slideIn 0.5s ease-out forwards;
+
+            & p {
+                padding: 15px;
+
+                @media (max-width : 768px) {
+                        font-size: v.$size12;
+                    }
+            }
+        }
+    }
+}

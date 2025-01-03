@@ -2,14 +2,7 @@
 
 html {
     font-family: v.$font-primary;
-    font-size: 100%;
-    @media (max-width: 1024px) {
-        font-size: 62.5%;
-    }
-    @media (max-width: 768px) {
-        font-size: 56.25%;
-    }
-}
+   }
 
 h1 {
     font-size: v.$size48;
