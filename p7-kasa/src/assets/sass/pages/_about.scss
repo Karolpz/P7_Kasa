@@ -1,0 +1,9 @@
+@use '../utils/variables' as v;
+
+.aboutCollapses {
+    margin: 0 150px 30px 150px;
+
+    @media (max-width : 768px) {
+        margin: v.$margin-mobile
+    }
+}

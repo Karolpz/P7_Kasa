@@ -1,0 +1,69 @@
+@use '../utils/variables' as v;
+
+.logementContainer {
+    margin: v.$margin-desktop;
+
+    & .logementInfo {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        & h2 {
+            color: v.$primary-color;
+            font-weight: v.$weigh-normal;
+        }
+
+        & h3 {
+            font-size: v.$size18;
+            font-weight: v.$weigh-normal;
+        }
+
+        & button {
+            font-size: v.$size14;
+            color: white;
+            font-weight: v.$weigh-bold;
+            background-color: v.$primary-color;
+            border-radius: 10px;
+            padding: 5px;
+            width: 155px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+
+        & .logementHost {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            & img {
+                border-radius: 50%;
+                width: 64px;
+                height: 64px;
+            }
+            & p {
+                color: v.$primary-color;
+                text-align: right;
+                max-width: 93px;
+            }
+        }
+    }
+
+}
+
+.logementCollapses {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+    margin-top: 20px;
+
+    & .collapseContent {
+        flex-basis: 60%;
+
+        & .collapseText ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+}

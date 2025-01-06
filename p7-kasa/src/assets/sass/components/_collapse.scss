@@ -12,68 +12,63 @@
     }
 }
 
-.allCollapses {
-    margin : 0 150px 30px 150px;
 
-    @media (max-width : 768px) {
-        margin : v.$margin-mobile
-    }
+.collapseContent {
+    margin-bottom: 30px;
 
-    & .collapseContent {
-        margin-bottom: 30px;
+    & .collapseBar {
+        background-color: v.$primary-color;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
 
-        & .collapseBar {
-            background-color: v.$primary-color;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 1;
+        & h2 {
+            color: white;
+            font-size: v.$size24;
+            padding: 10px;
 
-            & h2 {
-                color: white;
-                font-size: v.$size24;
-                padding: 10px;
-
-                @media (max-width : 768px) {
-                    font-size: v.$size14;
-                }
-            }
-
-            & img {
-                margin-right: 20px;
-                cursor: pointer;
-                transition: transform 0.3s ease;
-                transform-origin: center;
-
-                &.arrow {
-                    width : 32px;
-                    height: 32px;;
-                }
-
-                &.arrowOpen {
-                    transform: rotate(-180deg);
-                }
-
-                &.arrowClose {
-                    transform: rotate(0deg);
-                }
+            @media (max-width : 768px) {
+                font-size: v.$size14;
             }
         }
 
-        & .collapseText {
-            position: relative;
-            background-color: v.$secondary-color;
-            border-radius : 0 0 5px 5px;
-            animation: slideIn 0.5s ease-out forwards;
+        & img {
+            margin-right: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            transform-origin: center;
 
-            & p {
-                padding: 15px;
+            &.arrow {
+                width: 32px;
+                height: 32px;
+                ;
+            }
 
-                @media (max-width : 768px) {
-                        font-size: v.$size12;
-                    }
+            &.arrowOpen {
+                transform: rotate(-180deg);
+            }
+
+            &.arrowClose {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    & .collapseText {
+        position: relative;
+        background-color: v.$secondary-color;
+        border-radius: 0 0 5px 5px;
+        animation: slideIn 0.5s ease-out forwards;
+        line-height : 1.5;
+
+        & p {
+            padding: 15px;
+
+            @media (max-width : 768px) {
+                font-size: v.$size12;
             }
         }
     }

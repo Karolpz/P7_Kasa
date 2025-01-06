@@ -9,21 +9,23 @@ const Collapse = ({ title, text }) => {
     }
 
     return (
-        <div className="collapseContent">
-            <div className="collapseBar">
-                <h2> {title} </h2>
-                <img 
-                src={arrow} 
-                alt="flèche déroulement collapse" 
-                onClick={toggleCollapse} 
-                className={isOpen ? 'arrow arrowOpen' : 'arrow arrowClose'} />
-            </div>
-            {isOpen && (
-                <div className="collapseText">
-                    <p>{text}</p>
+
+            <div className="collapseContent">
+                <div className="collapseBar">
+                    <h2> {title} </h2>
+                    <img
+                        src={arrow}
+                        alt="flèche déroulement collapse"
+                        onClick={toggleCollapse}
+                        className={isOpen ? 'arrow arrowOpen' : 'arrow arrowClose'} />
                 </div>
-            )}
-        </div>
+                {isOpen && (
+                    <div className="collapseText">
+                        <p>{text}</p>
+                    </div>
+                )}
+            </div>
+
     )
 }
 

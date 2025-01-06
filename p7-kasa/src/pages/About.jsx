@@ -11,7 +11,7 @@ const About = () => {
 
       <Banner srcImage={imageBanner} />
 
-      <div className="allCollapses">
+      <div className="aboutCollapses">
         {aboutContent.map((item) => (
           <Collapse
             key={item.id}

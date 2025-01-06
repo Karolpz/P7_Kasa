@@ -1,7 +1,6 @@
 @use '../utils/variables' as v;
 
 .logementPicture {
-    margin: v.$margin-desktop;
 
     & img.currentPicture {
         position: relative;
