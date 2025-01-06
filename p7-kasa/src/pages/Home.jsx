@@ -9,11 +9,19 @@ const Home = () => {
   return (
     <>
       <Banner
-      srcImage = { imageBanner } 
-      titleImage= "Chez vous, partout et ailleurs"
+        srcImage={imageBanner}
+        titleImage="Chez vous, partout et ailleurs"
       />
-      
-      <Card logements = { logements } />
+      <div className='cardsContainer'>
+        {logements.map((logement) => (
+          <Card
+            key={logement.id}
+            id={logement.id}
+            image={logement.cover}
+            title={logement.title}
+          />
+        ))}
+      </div>
     </>
   )
 }

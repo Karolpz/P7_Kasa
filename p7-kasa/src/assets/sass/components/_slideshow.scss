@@ -1,0 +1,36 @@
+@use '../utils/variables' as v;
+
+.logementPicture {
+    margin: v.$margin-desktop;
+
+    & img.currentPicture {
+        position: relative;
+        border-radius: 25px;
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+    }
+
+    & img.arrow {
+        position: absolute;
+        cursor: pointer;
+    }
+
+    & img.rightArrow {
+        right: 100px;
+        top: 300px;
+    }
+
+    & img.leftArrow {
+        left: 100px;
+        top: 300px;
+    }
+
+    & p {
+        position: absolute;
+        left: 50%;
+        top: 500px;
+        color: white;
+        font-size: v.$size18;
+    }
+}

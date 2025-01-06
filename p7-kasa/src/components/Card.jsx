@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom'
 
-const Card = ({ logements }) => {
+const Card = ({id, image, title }) => {
   return (
-    <div className='cardsContainer'>
-      {logements.map((logement) => (
-        <div key={logement.id} className='cardContent'>
-          <img src={logement.cover} alt={logement.title} className='cardPicture' />
-          <h2>{logement.title}</h2>
-        </div>
-      ))}
-    </div>
+    <NavLink to={`/logements/${id}`}>
+      <div className='cardContent'>
+        <img src={image} alt={title} className='cardPicture' />
+        <h2>{title}</h2>
+      </div>
+    </NavLink>
   );
 };
 
@@ -18,8 +17,8 @@ Card.propTypes = {
   logements: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      cover: PropTypes.string.isRequired,   
-      title: PropTypes.string.isRequired,   
+      cover: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
     })
   ).isRequired,
 };
