@@ -1,21 +1,39 @@
 @use '../utils/variables' as v;
 
+//Contenu de la page //
 .logementContainer {
     margin: v.$margin-desktop;
+
+    @media (max-width : 1024px) {
+        margin: v.$margin-mobile;
+    }
 
     & .logementInfo {
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
 
+        @media (max-width : 768px) {
+            flex-direction: column;
+        }
+
         & h2 {
             color: v.$primary-color;
             font-weight: v.$weigh-normal;
+
+            @media (max-width : 768px) {
+                font-size: v.$size18;
+            }
         }
 
         & h3 {
             font-size: v.$size18;
             font-weight: v.$weigh-normal;
+
+            @media (max-width : 768px) {
+                    font-size: v.$size14;
+                    margin-top: 10px;
+                }
         }
 
         & button {
@@ -28,34 +46,66 @@
             width: 155px;
             margin-right: 10px;
             margin-top: 20px;
+
+            @media (max-width : 768px) {
+                width: 84px;
+                font-size: 10px;
+            }
         }
 
-        & .logementHost {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-
-            & img {
-                border-radius: 50%;
-                width: 64px;
-                height: 64px;
+        & .logementHostRating {
+            @media (max-width : 768px) {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                margin-top: 10px;
             }
-            & p {
-                color: v.$primary-color;
-                text-align: right;
-                max-width: 93px;
+
+            & .logementHost {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 20px;
+
+                & img {
+                    border-radius: 50%;
+                    width: 64px;
+                    height: 64px;
+
+                    @media (max-width : 768px) {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                & p {
+                    color: v.$primary-color;
+                    text-align: right;
+                    width: 93px;
+
+                    @media (max-width : 768px) {
+                        font-size: v.$size12;
+                        width: 80px;
+                    }
+                }
             }
         }
     }
 
 }
 
+//Collapses//
 .logementCollapses {
     display: flex;
     justify-content: space-between;
     gap: 76px;
     margin-top: 20px;
+
+    @media (max-width : 768px) {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0;
+    }
 
     & .collapseContent {
         flex-basis: 60%;

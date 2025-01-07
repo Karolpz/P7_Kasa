@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logements from '../data/logements.json'
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import SlideShow from '../components/SlideShow';
 import Rating from '../components/Rating';
 import Collapse from '../components/Collapse'
@@ -8,10 +8,23 @@ import Collapse from '../components/Collapse'
 const FicheLogement = () => {
 
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const logement = logements.find((logement) => logement.id === id);
+
+  useEffect(() => {
+    if (!logement) {
+      navigate("*"); 
+    }
+  }, [logement, navigate]);
+
+  if (!logement) {
+    return null;
+  }
 
   return (
     <>
+      
       <div className='logementContainer'>
 
         <SlideShow

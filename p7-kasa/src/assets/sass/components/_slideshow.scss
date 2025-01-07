@@ -13,16 +13,28 @@
     & img.arrow {
         position: absolute;
         cursor: pointer;
+
+        @media (max-width : 768px) {
+            width: 24px;
+        }
     }
 
     & img.rightArrow {
         right: 100px;
         top: 300px;
+
+        @media (max-width : 768px) {
+                right: 30px;
+            }
     }
 
     & img.leftArrow {
         left: 100px;
         top: 300px;
+
+        @media (max-width : 768px) {
+                left: 30px;
+            }
     }
 
     & p {
@@ -31,5 +43,9 @@
         top: 500px;
         color: white;
         font-size: v.$size18;
+
+        @media (max-width : 768px) {
+            visibility: hidden;
+        }
     }
 }

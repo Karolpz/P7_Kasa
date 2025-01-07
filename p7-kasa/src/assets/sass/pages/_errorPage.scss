@@ -5,19 +5,32 @@
 
     & h1 {
         color: v.$primary-color;
-        font-size: 16rem;
+        font-size: 288px;
         margin-bottom: 140px;
+
+        @media (max-width : 768px) {
+            font-size: 99px;
+            margin: 100px 0;
+        }
     }
 
     & h2 {
         color: v.$primary-color;
         font-weight: v.$weigh-normal;
         margin-bottom: 140px;
+
+        @media (max-width : 768px) {
+                font-size: 18px;
+            }
     }
 
     & p {
         font-size: v.$size18;
         text-decoration: underline;
         margin-bottom: 140px;
+
+        @media (max-width : 768px) {
+                font-size: 14px;
+            }
     }
 }
