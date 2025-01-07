@@ -29,23 +29,23 @@
         & h3 {
             font-size: v.$size18;
             font-weight: v.$weigh-normal;
+            margin-bottom: 10px;
 
             @media (max-width : 768px) {
-                    font-size: v.$size14;
-                    margin-top: 10px;
-                }
+                font-size: v.$size14;
+                margin-top: 10px;
+            }
         }
 
-        & button {
+        & span {
             font-size: v.$size14;
-            color: white;
+            color:v.$white-color;
             font-weight: v.$weigh-bold;
             background-color: v.$primary-color;
             border-radius: 10px;
             padding: 5px;
             width: 155px;
             margin-right: 10px;
-            margin-top: 20px;
 
             @media (max-width : 768px) {
                 width: 84px;

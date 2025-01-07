@@ -19,14 +19,14 @@
         @media (max-width: 768px) {
             height: 111px;
         }
-        }
+    }
 
     & .titleBanner {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: white;
+        color: v.$white-color;
         text-align: center;
         width: 100%;
 

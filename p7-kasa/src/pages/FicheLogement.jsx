@@ -14,7 +14,7 @@ const FicheLogement = () => {
 
   useEffect(() => {
     if (!logement) {
-      navigate("*"); 
+      navigate("*");
     }
   }, [logement, navigate]);
 
@@ -24,11 +24,10 @@ const FicheLogement = () => {
 
   return (
     <>
-      
-      <div className='logementContainer'>
+
+      <section className='logementContainer'>
 
         <SlideShow
-          key={logement.id}
           pictures={logement.pictures}
           title={logement.title}
         />
@@ -38,16 +37,16 @@ const FicheLogement = () => {
             <h2>{logement.title}</h2>
             <h3>{logement.location}</h3>
             {logement.tags.map((tag, index) => (
-              <button key={index}>
+              <span key={index}>
                 {tag}
-              </button>
+              </span>
             ))}
           </div>
 
           <div className="logementHostRating">
             <div className="logementHost">
               <p>{logement.host.name}</p>
-              <img src={logement.host.picture} alt={`Portrait de ${logement.host.name}`} />
+              <img src={logement.host.picture} alt={`Portrait de ${logement.host.name}, propriétaire du logement`} />
             </div>
             <Rating rating={logement.rating} />
           </div>
@@ -63,13 +62,14 @@ const FicheLogement = () => {
             text={
               <ul>
                 {logement.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
+                  <li key={index}>
+                    {equipment}</li>
                 ))}
               </ul>
             }
           />
         </div>
-      </div>
+      </section>
 
     </>
   )

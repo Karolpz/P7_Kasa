@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const Banner = ({ srcImage, titleImage }) => {
   return (
-    <div className="banner">
+    <section className="banner">
       <img src={srcImage} alt="Bannière paysage du site" className="logoBanner" />
       <h1 className="titleBanner">{titleImage}</h1>
-    </div>
+    </section>
   );
 };
 

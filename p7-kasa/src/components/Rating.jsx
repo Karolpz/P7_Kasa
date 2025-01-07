@@ -1,9 +1,10 @@
 import React from 'react';
-import fullStarPic from '../assets/images/fullStar.png';  // Image pour étoile pleine
-import emptyStarPic from '../assets/images/emptyStar.png';  // Image pour étoile vide
+import fullStarPic from '../assets/images/fullStar.png';
+import emptyStarPic from '../assets/images/emptyStar.png';
+import PropTypes from 'prop-types';
 
 const Rating = ({ rating }) => {
-    const fullStars = rating; 
+    const fullStars = rating;
 
     return (
         <div className="rating">
@@ -16,6 +17,10 @@ const Rating = ({ rating }) => {
             ))}
         </div>
     );
+};
+
+Rating.propTypes = {
+    rating: PropTypes.number.isRequired,
 };
 
 export default Rating;

@@ -12,7 +12,7 @@ const Home = () => {
         srcImage={imageBanner}
         titleImage="Chez vous, partout et ailleurs"
       />
-      <div className='cardsContainer'>
+      <section className='cardsContainer'>
         {logements.map((logement) => (
           <Card
             key={logement.id}
@@ -21,7 +21,7 @@ const Home = () => {
             title={logement.title}
           />
         ))}
-      </div>
+      </section>
     </>
   )
 }

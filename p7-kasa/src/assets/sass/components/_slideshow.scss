@@ -24,8 +24,8 @@
         top: 300px;
 
         @media (max-width : 768px) {
-                right: 30px;
-            }
+            right: 30px;
+        }
     }
 
     & img.leftArrow {
@@ -33,15 +33,15 @@
         top: 300px;
 
         @media (max-width : 768px) {
-                left: 30px;
-            }
+            left: 30px;
+        }
     }
 
     & p {
         position: absolute;
         left: 50%;
         top: 500px;
-        color: white;
+        color: v.$white-color;
         font-size: v.$size18;
 
         @media (max-width : 768px) {

@@ -26,7 +26,7 @@
         z-index: 1;
 
         & h2 {
-            color: white;
+            color: v.$white-color;
             font-size: v.$size24;
             padding: 10px;
 
@@ -62,7 +62,7 @@
         background-color: v.$secondary-color;
         border-radius: 0 0 5px 5px;
         animation: slideIn 0.5s ease-out forwards;
-        line-height : 1.5;
+        line-height: 1.5;
 
         & p {
             padding: 15px;
