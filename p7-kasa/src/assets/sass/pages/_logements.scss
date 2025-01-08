@@ -11,45 +11,55 @@
     & .logementInfo {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-top: 20px;
 
         @media (max-width : 768px) {
             flex-direction: column;
+            align-items: normal;
         }
 
-        & h2 {
-            color: v.$primary-color;
-            font-weight: v.$weigh-normal;
+        & .logementLocation {
+            width: 75%;
 
             @media (max-width : 768px) {
+                width: 100%;
+            }
+
+            & h2 {
+                color: v.$primary-color;
+                font-weight: v.$weigh-normal;
+
+                @media (max-width : 768px) {
+                    font-size: v.$size18;
+                }
+            }
+
+            & h3 {
                 font-size: v.$size18;
+                font-weight: v.$weigh-normal;
+                margin-bottom: 20px;
+
+                @media (max-width : 768px) {
+                    font-size: v.$size14;
+                    margin-top: 10px;
+                }
             }
-        }
 
-        & h3 {
-            font-size: v.$size18;
-            font-weight: v.$weigh-normal;
-            margin-bottom: 10px;
-
-            @media (max-width : 768px) {
+            & span {
                 font-size: v.$size14;
-                margin-top: 10px;
-            }
-        }
+                color: v.$white-color;
+                font-weight: v.$weigh-bold;
+                background-color: v.$primary-color;
+                border-radius: 10px;
+                padding: 5px;
+                width: 155px;
+                margin-right: 7px;
 
-        & span {
-            font-size: v.$size14;
-            color:v.$white-color;
-            font-weight: v.$weigh-bold;
-            background-color: v.$primary-color;
-            border-radius: 10px;
-            padding: 5px;
-            width: 155px;
-            margin-right: 10px;
-
-            @media (max-width : 768px) {
-                width: 84px;
-                font-size: 10px;
+                @media (max-width : 768px) {
+                    width: 84px;
+                    font-size: 10px;
+                }
             }
         }
 
@@ -81,11 +91,11 @@
                 & p {
                     color: v.$primary-color;
                     text-align: right;
-                    width: 93px;
+                    width: 80px;
 
                     @media (max-width : 768px) {
                         font-size: v.$size12;
-                        width: 80px;
+                        width: 60px;
                     }
                 }
             }
