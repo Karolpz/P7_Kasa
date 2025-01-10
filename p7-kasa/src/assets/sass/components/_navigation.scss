@@ -5,7 +5,8 @@
     gap: 57px;
 
     @media (max-width: 768px) {
-        gap: 26px
+        gap: 26px;
+        font-size : v.$size12;
     }
 
     & li {
