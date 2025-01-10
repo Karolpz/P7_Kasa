@@ -1,65 +1,45 @@
 @use '../utils/variables' as v;
 
-.cardsContainer {
-   background-color: v.$secondary-color;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 40px;
-   justify-content: center;
-   margin: v.$margin-desktop;
-   border-radius: 20px;
-   padding: 40px;
 
-   @media (max-width : 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-   }
+.cardContent {
+   width: 100%;
+   height: 340px;
+   position: relative;
+   cursor: pointer;
 
    @media (max-width : 768px) {
-      grid-template-columns: repeat(1, 1fr);
-      margin: v.$margin-mobile;
-      gap: 20px;
+      height: 255px;
    }
 
-   & .cardContent {
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 340px;
+      height: 100%;
+      background-image: v.$linear-color;
+      z-index: 1;
+      pointer-events: none;
+   }
+
+   & img {
       position: relative;
-      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+   }
+
+   & h2 {
+      position: absolute;
+      top: 275px;
+      left: 10px;
+      font-size: 18px;
+      color: v.$white-color;
 
       @media (max-width : 768px) {
-         height: 255px;
-      }
-
-      &::after {
-         content: '';
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         background-image: v.$linear-color;
-         z-index: 1;
-         pointer-events: none;
-      }
-
-      & img {
-         position: relative;
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         border-radius: 8px;
-      }
-
-      & h2 {
-         position: absolute;
-         top: 275px;
-         left: 10px;
-         font-size: 18px;
-         color: v.$white-color;
-
-         @media (max-width : 768px) {
-            top: 190px;
-         }
+         top: 190px;
       }
    }
 }

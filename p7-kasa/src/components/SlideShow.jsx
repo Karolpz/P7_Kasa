@@ -9,11 +9,15 @@ function SlideShow({ pictures, title }) {
     const totalPictures = pictures.length;
 
     const nextSlide = () => {
-        setCurrentPicture((currentPicture) => (currentPicture + 1) % totalPictures);
+        setCurrentPicture((currentPicture) =>
+            currentPicture < totalPictures - 1 ? currentPicture + 1 : 0
+        );
     }
 
     const prevSlide = () => {
-        setCurrentPicture((currentPicture) => (currentPicture - 1 + totalPictures) % totalPictures);
+        setCurrentPicture((currentPicture) =>
+            currentPicture > 0 ? currentPicture - 1 : totalPictures - 1
+        );
     }
 
     return (
