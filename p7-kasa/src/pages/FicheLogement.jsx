@@ -60,12 +60,12 @@ const FicheLogement = () => {
           <Collapse
             title='Équipements'
             text={
-              <ul>
-                {logement.equipments.map((equipment, index) => (
-                  <li key={index}>
-                    {equipment}</li>
-                ))}
-              </ul>
+                <ul>
+                  {logement.equipments.map((equipment, index) => (
+                    <li key={index}>
+                      {equipment}</li>
+                  ))}
+                </ul>
             }
           />
         </div>

@@ -22,7 +22,7 @@ const Collapse = ({ title, text }) => {
             </div>
             {isOpen && (
                 <div className="collapseText">
-                    <p>{text}</p>
+                    {text}
                 </div>
             )}
         </div>
