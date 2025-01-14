@@ -18,5 +18,7 @@
         grid-template-columns: repeat(1, 1fr);
         margin: v.$margin-mobile;
         gap: 20px;
+        background-color: v.$white-color;
+        padding: 0;
     }
 }
